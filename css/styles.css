@@ -37,11 +37,19 @@ p {
 }
 
 .container {
-  width: 1158px;
+  width: 428px;
   /* margin: 0 auto; */
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1158px) {
+    width: 1158px;
+  }
 }
 
 .nav-setting {
@@ -49,16 +57,24 @@ p {
 }
 
 .nav-list {
-  display: flex;
-  gap: 40px;
-  margin-left: 76px;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    gap: 40px;
+    margin-left: 76px;
+  }
 }
 
 .header-contact-list {
-  display: flex;
-  /* gap: 40px; */
-  margin-top: -40px;
-  margin-left: -40px;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    /* gap: 40px; */
+    margin-top: -40px;
+    margin-left: -40px;
+  }
 }
 
 .header-contact-list-info {
@@ -169,8 +185,11 @@ p {
 }
 
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+
+  @media screen and (min-width: 1158px) {
+  }
 }
 
 .hero-sec-container {
@@ -179,14 +198,29 @@ p {
   align-items: center;
 }
 .hero-title {
+  color: #fff;
   text-align: center;
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1;
-  color: #ffffff;
-  width: 496px;
-  letter-spacing: 1.12px;
-  margin-bottom: 48px;
+  font-family: Roboto;
+  font-size: 36px;
+  font-style: normal;
+  line-height: 40px; /* 111.111% */
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
+  margin-bottom: 88px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 1.12px;
+    margin-bottom: 48px;
+  }
+
+  @media screen and (min-width: 1158px) {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 60px;
+  }
 }
 
 .btn-studio-mid {
@@ -211,20 +245,52 @@ p {
 }
 
 .second-list {
-  display: flex;
-  /* gap: 24px; */
-  margin-top: -24px;
-  margin-left: -24px;
+  display: block;
+
+  @media screen and (min-width: 768px) {
+    /* display: flex;
+    width: 354px;
+    flex-wrap: wrap;
+    gap: 24px; */
+    /* margin-top: -24px;
+    margin-left: -24px; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1158px) {
+    display: flex;
+    /* gap: 24px; */
+    flex-wrap: nowrap;
+    /* margin-top: -24px;
+    margin-left: -24px; */
+  }
 }
 
 .second-list-gap {
-  margin-top: 24px;
+  /* margin-top: 24px;
   margin-left: 24px;
-  width: 264px;
+  width: 264px; */
+  @media screen and (min-width: 768px) {
+    flex-basis: 354px;
+  }
+
+  @media screen and (min-width: 1158px) {
+    /* margin-top: 24px;
+    margin-left: 24px; */
+    flex-basis: 264px;
+  }
 }
 .third-sec {
-  /* margin-top: -120px; */
-  padding-top: 0;
+  /* padding-top: 0; */
+  display: none;
+
+  @media screen and (min-width: 1158px) {
+    display: block;
+    padding-top: 0;
+  }
 }
 
 .third-list {
@@ -245,21 +311,36 @@ p {
 
 .fourth-list {
   display: flex;
-  /* gap: 24px; */
-  margin-top: -24px;
-  margin-left: -24px;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
+
+  @media screen and (min-width: 768px) {
+    column-gap: 24px;
+    row-gap: 72px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .card-container {
+  /* width: 264px; */
+  /* margin: 0 auto 72px auto; */
   border-radius: 0px 0px 4px 4px;
   background: var(--white, #fff);
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   padding-bottom: 32px;
-  margin-top: 24px;
-  margin-left: 24px;
+  /* margin-top: 24px;
+  margin-left: 24px; */
+
+  @media screen and (min-width: 768px) {
+  }
+}
+.card-container:last-child {
+  margin-bottom: 0;
 }
 .card-img {
   margin-bottom: 32px;
@@ -273,7 +354,6 @@ p {
   background-color: white;
 }
 
-.title-second-section,
 .team-name,
 .projects-title {
   font-weight: 500;
@@ -281,6 +361,35 @@ p {
   line-height: 1.2;
   color: var(--navy-blue);
   margin-bottom: 8px;
+}
+
+.title-second-section {
+  text-align: center;
+
+  /* Header 2 */
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px; /* 111.111% */
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
+
+  @media screen and (min-width: 768px) {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px; /* 111.111% */
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+  }
+
+  @media screen and (min-width: 1158px) {
+    text-align: left;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--navy-blue);
+    margin-bottom: 8px;
+  }
 }
 
 .section-title {
@@ -298,6 +407,8 @@ p {
   font-size: 16px;
   /* for viewing purposes. I didnt change the default color */
   color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
   /* padding-bottom: 100px; */
 }
 
@@ -495,19 +606,20 @@ p {
 /* ============================ Team Card SVG ================================*/
 
 /* ============================ ADVANTAGE SVG ================================*/
-.advantage-icon {
-  padding: 24px 100px;
-}
 
 .advantage-icon-container {
-  width: 264px;
-  height: 112px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f4f4fd;
-  border-radius: 4px;
-  margin-bottom: 8px;
+  display: none;
+
+  @media screen and (min-width: 1158px) {
+    width: 264px;
+    height: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
 }
 /* ============================ ADVANTAGE SVG ================================*/
 
@@ -515,11 +627,24 @@ p {
 
 .customers-icon-list {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  /* margin-top: -24px;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 72px;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    column-gap: 24px;
+  }
+
+  @media screen and (min-width: 1158px) {
+    justify-content: space-between;
+    align-items: baseline;
+    /* let this be a comment - start */
+    /* margin-top: -24px;
   margin-left: -24px; */
-  gap: 24px;
+    /* let this be a comment - end */
+    gap: 24px;
+  }
 }
 
 .customer-icon-link {
@@ -645,7 +770,6 @@ p {
 .form-btn-footer-icon {
   fill: white;
 }
-
 /* MODAL  WINDOW*/
 .backdrop {
   position: fixed;
