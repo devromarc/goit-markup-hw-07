@@ -48,6 +48,25 @@
             >
           </li>
         </ul>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-icon" width="32" height="32">
+            <use href="./images/icons.svg#icon-hamburger-open"></use>
+          </svg>
+        </button>
+
+        <!-- nav-mobile -->
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="menu-toggle js-close-menu menu-container-close">
+            <svg width="32" height="32">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+        <!-- end nav-mobile -->
       </div>
     </header>
     <main>
@@ -128,6 +147,7 @@
                 src="images/pic1-wawd.jpg"
                 alt="Website"
                 width="360"
+                height="300"
               />
             </li>
             <li class="third-list-gap">
@@ -136,6 +156,7 @@
                 src="images/pic2-wawd.jpg"
                 alt="Communication"
                 width="360"
+                height="300"
               />
             </li>
             <li class="third-list-gap">
@@ -144,6 +165,7 @@
                 src="images/pic3-wawd.jpg"
                 alt="Mobile App"
                 width="360"
+                height="300"
               />
             </li>
           </ul>
@@ -607,5 +629,6 @@
 
     <!-- ==================================== MODAL====================================   -->
     <script src="./modal.js"></script>
+    <script src="./mobile.js"></script>
   </body>
 </html>
