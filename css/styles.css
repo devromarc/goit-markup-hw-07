@@ -183,12 +183,59 @@ img {
 .hero-sec {
   /* background: #2e2f42b2; */
   background: linear-gradient(#2e2f42b2, #2e2f42b2),
-    url("../images/hero-bg-d.jpg");
+    url("../images/hero-bg-m.jpg");
   /* background-size: auto auto; */
   background-repeat: no-repeat;
-  background-position: center;
+  /* background-position: center; */
   background-size: cover;
-  padding: 188px 0;
+  padding: 112px 0;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background: linear-gradient(#2e2f42b2, #2e2f42b2),
+      url("../images/hero-bg-m@2x.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+  }
+
+  @media screen and (min-width: 768px) {
+    background: linear-gradient(#2e2f42b2, #2e2f42b2),
+      url("../images/hero-bg-t.jpg");
+    /* background-size: auto auto; */
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background: linear-gradient(#2e2f42b2, #2e2f42b2),
+        url("../images/hero-bg-t@2x.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      /* background-position: center; */
+    }
+  }
+  @media screen and (min-width: 1158px) {
+    background: linear-gradient(#2e2f42b2, #2e2f42b2),
+      url("../images/hero-bg-d.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 188px 0;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background: linear-gradient(#2e2f42b2, #2e2f42b2),
+        url("../images/hero-bg-d@2x.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
 }
 
 .section {
@@ -776,7 +823,7 @@ img {
 }
 
 .form-input-sub {
-  width: 398px;
+  max-width: 398px;
   background: transparent;
   padding: 8px 16px;
   color: white;
