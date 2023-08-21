@@ -6,6 +6,9 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  @media screen and (min-width: 320px) {
+    overflow-x: hidden;
+  }
 }
 h1,
 h2,
