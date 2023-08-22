@@ -453,9 +453,7 @@ img {
 
 .title-second-section {
   text-align: center;
-
-  /* Header 2 */
-  font-family: Roboto;
+  margin-bottom: 8px;
   font-size: 36px;
   font-weight: 700;
   line-height: 40px; /* 111.111% */
