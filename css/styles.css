@@ -48,7 +48,7 @@ img {
 }
 
 .container {
-  width: 428px;
+  width: 100%;
   /* margin: 0 auto; */
   margin-left: auto;
   margin-right: auto;
@@ -274,6 +274,11 @@ img {
     padding-top: 120px;
     padding-bottom: 120px;
   }
+}
+
+.section-portfolio {
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 
 .hero-sec-container {
@@ -517,13 +522,19 @@ img {
 }
 
 .filter-btn {
-  list-style-type: none;
   display: flex;
-  justify-content: center;
-  /* gap: 24px; */
+  flex-wrap: wrap;
+  justify-content: flex-start;
   margin-top: -24px;
   margin-left: -24px;
   margin-bottom: 72px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    /* gap: 24px; */
+    margin-top: -24px;
+    margin-left: -24px;
+  }
 }
 
 .filter-btn-list {
@@ -552,8 +563,16 @@ img {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  margin-top: -24px;
-  margin-left: -24px;
+  gap: 48px;
+  justify-content: flex-start;
+
+  @media screen and (min-width: 768px) {
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+  @media screen and (min-width: 768px) {
+    row-gap: 48px;
+  }
 }
 
 /* .row-first,
@@ -568,13 +587,14 @@ img {
   justify-content: center;
   gap: 24px;
 } */
-
+/* 
 .projects-card-list {
   margin-top: 24px;
   margin-left: 24px;
-}
+} */
 
 .projects-card-container {
+  width: 100%;
   display: flex;
   /* padding: 0px 0px 32px 0px; */
   flex-direction: column;
@@ -582,6 +602,9 @@ img {
   background: var(--white, #fff);
   cursor: pointer;
   margin-bottom: 48px;
+  @media screen and (min-width: 768px) {
+    width: auto;
+  }
 }
 /* 
 .projects-card-container:hover {
@@ -604,6 +627,7 @@ img {
 
 .projects-card-img {
   display: block;
+  width: 100%;
   max-width: 100%;
   height: auto;
   position: relative;
@@ -797,7 +821,7 @@ img {
 .footer-flex {
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  gap: 72px;
   /* align-items: flex-start; */
 
   @media screen and (min-width: 768px) {
@@ -849,7 +873,8 @@ img {
 }
 
 .form-input-sub {
-  max-width: 398px;
+  width: 100%;
+  /* max-width: 398px; */
   background: transparent;
   padding: 8px 16px;
   color: white;
@@ -918,8 +943,8 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 408px;
-  min-height: 584px;
+  width: 100%;
+  height: auto;
   border-radius: 4px;
   background: #fcfcfc;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
@@ -927,6 +952,11 @@ img {
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 768px) {
+    max-width: 408px;
+    max-height: 584px;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -1178,7 +1208,7 @@ img {
   justify-content: space-between;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100vw;
   height: 100vh;
   padding: 80px 40px 40px;
